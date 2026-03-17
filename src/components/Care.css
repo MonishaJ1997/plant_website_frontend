@@ -1,0 +1,267 @@
+.plantcare {
+  background: #f5fbf2;
+  min-height: 100vh;
+}
+
+/* HERO */
+.care-hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.care-hero h1 {
+  font-size: 36px;
+  color: #1b5e20;
+}
+
+.care-hero p {
+  color: #555;
+  margin-top: 10px;
+}
+
+/* GRID */
+.care-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* CARD */
+.care-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.care-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ICON */
+.care-icon {
+  font-size: 40px;
+  color: #16a34a;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.care-card h3 {
+  margin-bottom: 10px;
+}
+
+.care-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* BANNER */
+.care-banner {
+  text-align: center;
+  padding: 50px 20px;
+  background: #e8f5e9;
+  margin-top: 30px;
+}
+
+.care-banner h2 {
+  color: #1b5e20;
+}
+
+.care-banner p {
+  color: #555;
+  margin-top: 10px;
+}
+/* EXTRA SECTION */
+.extra-care {
+  padding: 40px;
+  text-align: center;
+}
+
+.extra-care h2 {
+  margin-bottom: 30px;
+}
+
+.extra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.extra-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.extra-card:hover {
+  transform: scale(1.05);
+}
+
+/* DO & DON'T */
+.dos-donts {
+  padding: 40px;
+  background: #f0f7f2;
+  text-align: center;
+}
+
+.dd-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.dos, .donts {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.dos h3 {
+  color: green;
+}
+
+.donts h3 {
+  color: red;
+}
+
+ul {
+  text-align: left;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* QUOTE */
+.care-banner {
+  text-align: center;
+  padding: 50px;
+  background: #dff5e1;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* ============================= */
+/* 📱 MOBILE (max-width: 768px) */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .care-hero {
+    padding: 40px 15px;
+  }
+
+  .care-hero h1 {
+    font-size: 26px;
+  }
+
+  .care-hero p {
+    font-size: 14px;
+  }
+
+  /* MAIN GRID */
+  .care-section {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .care-card {
+    padding: 18px;
+  }
+
+  .care-icon {
+    font-size: 32px;
+  }
+
+  /* EXTRA SECTION */
+  .extra-care {
+    padding: 20px;
+  }
+
+  .extra-care h2 {
+    font-size: 22px;
+  }
+
+  .extra-card {
+    padding: 15px;
+  }
+
+  /* DO & DON'T */
+  .dd-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .dos, .donts {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* BANNER */
+  .care-banner {
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+
+}
+
+
+/* ============================= */
+/* 📲 TABLET (769px–1024px) */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .care-hero h1 {
+    font-size: 30px;
+  }
+
+  .care-section {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .extra-care {
+    padding: 30px;
+  }
+
+  .dd-container {
+    gap: 30px;
+  }
+
+  .dos, .donts {
+    width: 220px;
+  }
+
+  .care-banner {
+    font-size: 18px;
+  }
+
+}
+
+
+/* ============================= */
+/* 💻 SMALL LAPTOP (1025px–1280px) */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  .care-section {
+    padding: 40px;
+  }
+
+  .extra-care {
+    padding: 40px;
+  }
+
+}
