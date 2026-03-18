@@ -32,7 +32,7 @@ console.log(err)
 
 },[id])
 
-
+if(!plant) return <p>Loading...</p>;
 return(
 
 <>  {/* ✅ FIX 1: Wrap */}
