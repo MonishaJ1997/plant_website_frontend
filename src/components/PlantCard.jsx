@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 
 function PlantCard({ plant }) {
-  const BASE_URL = "http://127.0.0.1:8000";
+  const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 
   const { addCart, toggleWish, wishlist } = useContext(ShopContext);
 
