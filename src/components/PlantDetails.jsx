@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { FaArrowLeft, FaHeart, FaStar } from "react-icons/fa";
@@ -14,20 +14,21 @@ const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 const { id } = useParams();
 const navigate = useNavigate();
 
-const [plant,setPlant] = useState(null);
+const location = useLocation();
+const [plant, setPlant] = useState(location.state || null);
 
 const { addCart, toggleWish, wishlist } = useContext(ShopContext);
 
 const liked = wishlist.find(p => p.id === plant?.id);
 
 useEffect(() => {
-    if (!plant) {
-      axios
-        .get(`${BASE_URL}/api/plants/${id}/`)
-        .then((res) => setPlant(res.data))
-        .catch((err) => console.log(err));
-    }
-  }, [id, plant]);
+  if (!plant) {
+    axios
+      .get(`${BASE_URL}/api/plants/${id}/`)
+      .then((res) => setPlant(res.data))
+      .catch((err) => console.log(err));
+  }
+}, [id]);
 
 
 
