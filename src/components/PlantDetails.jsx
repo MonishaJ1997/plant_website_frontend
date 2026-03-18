@@ -10,7 +10,7 @@ import Footer from "./Footer";
 
 
 function PlantDetails(){
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 const { id } = useParams();
 const navigate = useNavigate();
 
