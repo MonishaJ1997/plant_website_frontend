@@ -14,7 +14,7 @@ const [category,setCategory] = useState("all");
 
 const [minPrice,setMinPrice] = useState(0);
 const [maxPrice,setMaxPrice] = useState(500);
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 useEffect(()=>{
 
 axios.get(`${BASE_URL}/api/plants/`,{
