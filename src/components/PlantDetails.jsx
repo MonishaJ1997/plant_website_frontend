@@ -32,7 +32,6 @@ console.log(err)
 
 },[id])
 
-if(!plant) return <p>Loading...</p>;
 
 return(
 
