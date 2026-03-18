@@ -190,3 +190,46 @@ background:#1b5e20;
   }
 
 }
+/* BUY NOW BUTTON */
+/* BUTTON ROW - SAME LINE */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* both buttons equal width */
+.btn-row button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* cart button (icon only) */
+.cart-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* buy now button */
+.buy-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #1b5e20;
+}
+
+.buy-btn:hover {
+  background: #e68900;
+}

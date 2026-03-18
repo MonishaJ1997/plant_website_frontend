@@ -36,7 +36,14 @@ cart.map(item => (
 
 <div className="cart-card" key={item.id}>
 
-<img src={item.image} alt={item.name} />
+<img
+  src={
+    item.image.startsWith("http")
+      ? item.image
+      : BASE_URL + item.image
+  }
+  alt={item.name}
+/>
 
 <div className="cart-info">
 

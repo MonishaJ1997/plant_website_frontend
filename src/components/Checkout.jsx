@@ -8,7 +8,7 @@ import Footer from "./Footer";
 function Checkout() {
 
   const navigate = useNavigate();
-  const { cart, total } = useContext(ShopContext);
+  const { cart, total,clearCart } = useContext(ShopContext);
 
   /* ================= STATE ================= */
 
@@ -308,7 +308,9 @@ const [paymentSuccess, setPaymentSuccess] = useState(false);
 
            <button
   className="pay-btn"
-  onClick={() => setPaymentSuccess(true)}
+  onClick={() => {setPaymentSuccess(true);
+    clearCart();
+}}
 >
   Pay Now
 </button>

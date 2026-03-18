@@ -120,6 +120,7 @@ toggleWish,
 subtotal,
 shipping,
 total
+
 }}
 >
 

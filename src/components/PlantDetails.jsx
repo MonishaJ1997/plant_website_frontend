@@ -109,14 +109,30 @@ onClick={()=>toggleWish(plant)}
 
 <div className="price-box">
 
-<h3>₹ {plant.price}</h3>
+  <h3>₹ {plant.price}</h3>
 
-<button
-className="add-btn"
-onClick={()=>addCart(plant)}
->
-ADD
-</button>
+  <div className="btn-row">
+
+    {/* 🛒 Add to Cart */}
+    <button
+      className="add-btn"
+      onClick={() => addCart(plant)}
+    >
+      Add to Cart
+    </button>
+
+    {/* ⚡ Buy Now */}
+    <button
+      className="buy-btn"
+      onClick={() => {
+        addCart(plant);
+        navigate("/cart");
+      }}
+    >
+      Buy Now
+    </button>
+
+  </div>
 
 </div>
 

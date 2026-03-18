@@ -3,7 +3,7 @@
 .details-container{
 max-width:420px;
 margin:auto;
-background:#fff;
+background:#f5fbf2;
 min-height:100vh;
 padding-bottom:90px;
 
@@ -191,4 +191,43 @@ transition:0.3s;
 .add-btn:hover{
 transform:scale(1.05);
 box-shadow:0 6px 15px rgba(46,125,50,0.4);
+}
+
+
+
+
+/* BUTTON ROW */
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* BOTH BUTTONS SAME SIZE */
+.btn-row button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  background: #2e7d32;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #1b5e20;
+}
+
+/* BUY NOW BUTTON */
+.buy-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.buy-btn:hover {
+  background: #e68900;
 }
