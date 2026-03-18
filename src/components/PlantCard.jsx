@@ -15,7 +15,7 @@ function PlantCard({ plant }) {
   return (
     <div
       className="plant-card"
-      onClick={() => navigate(`/plant/${plant.id}`)}
+      onClick={() => navigate(`/plant/${plant.id}`,{ state: plant })}
     >
       <div className="image-box">
         {plant.image && (
