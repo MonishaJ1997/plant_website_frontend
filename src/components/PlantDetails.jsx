@@ -20,19 +20,18 @@ const { addCart, toggleWish, wishlist } = useContext(ShopContext);
 
 const liked = wishlist.find(p => p.id === plant?.id);
 
-useEffect(()=>{
+useEffect(() => {
+    if (!plant) {
+      axios
+        .get(`${BASE_URL}/api/plants/${id}/`)
+        .then((res) => setPlant(res.data))
+        .catch((err) => console.log(err));
+    }
+  }, [id, plant]);
 
-axios.get(`${BASE_URL}/api/plants/${id}/`)
-.then(res=>{
-setPlant(res.data)
-})
-.catch(err=>{
-console.log(err)
-})
 
-},[id])
 
-if(!plant) return <p>Loading...</p>;
+if(!plant) return null;
 return(
 
 <>  {/* ✅ FIX 1: Wrap */}
