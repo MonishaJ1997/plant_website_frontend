@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import "./BlogDetails.css";
@@ -10,18 +10,24 @@ function BlogDetails() {
 
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [blog, setBlog] = useState(null);
+  const BASE_URL = "http://127.0.0.1:8000";
 
-  const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
+  // ✅ INSTANT DATA FROM PREVIOUS PAGE
+  const [blog, setBlog] = useState(location.state || null);
 
+  // ✅ FETCH ONLY IF NO STATE (refresh case)
   useEffect(() => {
-    axios.get(`${BASE_URL}/api/blogs/${id}/`)
-      .then(res => setBlog(res.data))
-      .catch(err => console.log(err));
+    if (!blog) {
+      axios.get(`${BASE_URL}/api/blogs/${id}/`)
+        .then(res => setBlog(res.data))
+        .catch(err => console.log(err));
+    }
   }, [id]);
 
-  if (!blog) return <p className="loading">Loading...</p>;
+  // ❌ NO loading text (just avoid crash)
+  if (!blog) return null;
 
   return (
     <>
@@ -44,6 +50,7 @@ function BlogDetails() {
           }
           alt={blog.title}
           className="details-img"
+          loading="lazy"
         />
 
         {/* CONTENT */}
@@ -62,7 +69,8 @@ function BlogDetails() {
         </div>
 
       </div>
-       <Footer />
+
+      <Footer />
     </>
   );
 }
