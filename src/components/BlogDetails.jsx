@@ -12,7 +12,7 @@ function BlogDetails() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const BASE_URL = "http://127.0.0.1:8000";
+  const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 
   // ✅ INSTANT DATA FROM PREVIOUS PAGE
   const [blog, setBlog] = useState(location.state || null);
