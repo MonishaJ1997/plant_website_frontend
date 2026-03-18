@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const ShopContext = createContext();
 
 export const ShopProvider = ({ children }) => {
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 const [cart, setCart] = useState([]);
 const [wishlist, setWishlist] = useState([]);
 
