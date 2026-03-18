@@ -66,7 +66,7 @@ function Blog() {
 
                   <button
                     className="read-btn"
-                    onClick={() => navigate(`/blog/${blog.id}`)}
+                    onClick={() => navigate(`/blog/${blog.id}`,{ state: blog })}
                   >
                     Read More
                   </button>
