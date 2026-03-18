@@ -10,7 +10,7 @@ function Blog() {
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
 
-  const BASE_URL = "http://127.0.0.1:8000";
+  const BASE_URL = "https://plant-website-backend-3y8q.onrender.com";
 
   useEffect(() => {
     axios.get(`${BASE_URL}/api/blogs/`)
